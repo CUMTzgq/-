@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1e90ff"
+            android:orientation="vertical">
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" android:id="@+id/view"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+            <TextView
+                    android:text="首页"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_weight="2"
+                  android:layout_height="0dp"
+                  android:background="@drawable/rounded_rectangle"
+                  android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                           android:layout_height="0dp"
+                                                           android:layout_weight="1">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal" app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                                   android:layout_height="wrap_content"
+                                                                   android:id="@+id/coursebtn"
+                                                                   android:layout_weight="1">
+                    <ImageView android:layout_height="50dp"
+                                 android:layout_width="50dp"
+                                 android:src="@drawable/ic_course"
+                                 android:background="@drawable/empty_background"
+                                 android:id="@+id/cbtn"
+                                 app:layout_constraintStart_toStartOf="parent"
+                                 app:layout_constraintEnd_toEndOf="parent"
+                                 app:layout_constraintTop_toTopOf="parent"
+                                 app:layout_constraintBottom_toBottomOf="parent"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="课程"
+                              android:textColor="@color/white"
+                              android:id="@+id/zz"
+                              app:layout_constraintStart_toStartOf="@+id/cbtn"
+                              app:layout_constraintEnd_toEndOf="@+id/cbtn"
+                              app:layout_constraintTop_toBottomOf="@+id/cbtn"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                                   android:layout_height="wrap_content"
+                                                                   android:id="@+id/xunfei"
+                                                                   android:layout_weight="1">
+                    <ImageView android:layout_height="50dp"
+                                 android:layout_width="50dp"
+                                 android:src="@drawable/ic_xinghuo"
+                                 android:background="@drawable/empty_background"
+
+                                 android:id="@+id/zhbtn"
+                                 app:layout_constraintStart_toStartOf="parent"
+                                 app:layout_constraintEnd_toEndOf="parent"
+                                 app:layout_constraintTop_toTopOf="parent"
+                                 app:layout_constraintBottom_toBottomOf="parent"/>
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="星火"
+                              android:textColor="@color/white"
+                              android:id="@+id/zh"
+                              app:layout_constraintStart_toStartOf="@+id/zhbtn"
+                              app:layout_constraintEnd_toEndOf="@+id/zhbtn"
+                              app:layout_constraintTop_toBottomOf="@+id/zhbtn"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_weight="1"
+                                                           android:id="@+id/xfyun">
+            <ImageView android:layout_height="40dp"
+                       android:layout_width="40dp"
+                       app:layout_constraintHorizontal_weight="1"
+                       android:src="@drawable/img"
+                       android:background="@drawable/backgroundoval"
+                       android:id="@+id/jiaofeibtn"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="讯飞云"
+                      android:textColor="@color/black"
+                      app:layout_constraintStart_toStartOf="@+id/jiaofeibtn"
+                      app:layout_constraintEnd_toEndOf="@+id/jiaofeibtn"
+                      app:layout_constraintTop_toBottomOf="@+id/jiaofeibtn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                           android:layout_height="wrap_content"
+                                                           android:id="@+id/image"
+                                                           android:layout_weight="1">
+            <ImageView android:layout_height="40dp"
+                       android:layout_width="40dp"
+                       app:layout_constraintHorizontal_weight="1"
+                       android:src="@drawable/ic_imgq"
+                       android:background="@drawable/backgroundoval"
+                       android:id="@+id/zhuanzhangbtn"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="图片问答"
+                      android:textColor="@color/black"
+                      android:id="@+id/zhuanzhang"
+                      app:layout_constraintStart_toStartOf="@+id/zhuanzhangbtn"
+                      app:layout_constraintEnd_toEndOf="@+id/zhuanzhangbtn"
+                      app:layout_constraintTop_toBottomOf="@+id/zhuanzhangbtn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                           android:id="@+id/generation"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_weight="1">
+            <ImageView android:layout_height="40dp"
+                       android:layout_width="40dp"
+                       app:layout_constraintHorizontal_weight="1"
+                       android:src="@drawable/ic_generation"
+                       android:background="@drawable/backgroundoval"
+                       android:id="@+id/zzjilubtn"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="文生图"
+                      android:textColor="@color/black"
+                      android:id="@+id/zzjilu"
+                      app:layout_constraintStart_toStartOf="@+id/zzjilubtn"
+                      app:layout_constraintEnd_toEndOf="@+id/zzjilubtn"
+                      app:layout_constraintTop_toBottomOf="@+id/zzjilubtn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_weight="1"
+                                                           android:id="@+id/correction_btn">
+            <ImageView android:layout_height="40dp"
+                       android:layout_width="40dp"
+                       app:layout_constraintHorizontal_weight="1"
+                       android:src="@drawable/ic_correction"
+                       android:background="@drawable/backgroundoval"
+                       android:id="@+id/yuebtn"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="文本纠错"
+                      android:textColor="@color/black"
+                      android:id="@+id/yue"
+                      app:layout_constraintStart_toStartOf="@+id/yuebtn"
+                      app:layout_constraintEnd_toEndOf="@+id/yuebtn"
+                      app:layout_constraintTop_toBottomOf="@+id/yuebtn"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:layout_weight="1" android:weightSum="4"
+                  android:id="@+id/bindbtn">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+
+                      android:layout_weight="1" android:orientation="vertical">
+            <ImageView android:layout_height="40dp"
+                       android:layout_width="40dp"
+
+                       android:background="@drawable/backgroundoval"
+                       android:layout_gravity="center"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/black"
+                      android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

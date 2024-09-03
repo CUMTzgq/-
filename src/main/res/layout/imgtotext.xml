@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_margin="10dp"
+                                       android:layout_alignParentEnd="true"
+                                       android:backgroundTint="#1e90ff"
+                                       app:cardCornerRadius="10dp"
+                                       android:elevation="@dimen/cardview_compat_inset_shadow">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                       android:layout_marginHorizontal="10dp"
+                       android:layout_marginTop="10dp"
+                       android:id="@+id/inputimg"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/chat_output_text"
+                      android:textColor="@color/white"
+                      android:textIsSelectable="true"
+                      android:layout_margin="10dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
