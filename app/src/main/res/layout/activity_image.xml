@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                tools:context=".ImageActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:layout_alignParentTop="true"
+            android:padding="20dp">
+        <ImageButton
+                android:src="@drawable/ic_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp" android:id="@+id/backbtn"
+                android:background="@drawable/backgroundoval"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/registerbtn"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tbtitle"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/input"
+            android:layout_below="@+id/toolbar"
+            android:background="#f4f4f4"
+            android:scrollbars="vertical" >
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:id="@+id/image_understanding_Notification"
+                      android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+<!--        <LinearLayout-->
+<!--                android:id="@+id/image_understanding_operation"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--            <Button-->
+<!--                    android:id="@+id/image_understanding_arun_stop_btn"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="STOP"/>-->
+<!--        </LinearLayout>-->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:id="@+id/input"
+                  android:layout_alignParentBottom="true"
+                  android:layout_margin="10dp"
+                  android:background="@drawable/edittext_background">
+        <EditText
+                android:id="@+id/image_understanding_input_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:padding="10dp"
+                android:maxLines="4"
+                android:layout_weight="1"
+                android:hint="描述一下对图片的问题~"/>
+        <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                   android:layout_gravity="center_vertical"
+                   android:src="@drawable/ic_imgs"
+                   android:id="@+id/image_understanding_imginput"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:id="@+id/image_understanding_arun_start_btn"
+                   android:paddingEnd="5dp"
+                   android:src="@drawable/ic_send"/>
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
